@@ -1,0 +1,98 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local KeyFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Check = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local key = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+KeyFrame.Name = "KeyFrame"
+KeyFrame.Parent = ScreenGui
+KeyFrame.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
+KeyFrame.Position = UDim2.new(0.283076912, 0, 0.319303334, 0)
+KeyFrame.Size = UDim2.new(0, 313, 0, 193)
+
+UICorner.Parent = KeyFrame
+
+Title.Name = "Title"
+Title.Parent = KeyFrame
+Title.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
+Title.BorderColor3 = Color3.fromRGB(108, 108, 108)
+Title.Position = UDim2.new(0.178913742, 0, 0.0310880821, 0)
+Title.Size = UDim2.new(0, 200, 0, 50)
+Title.Font = Enum.Font.GothamBlack
+Title.Text = "KEY"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextWrapped = true
+
+Check.Name = "Check"
+Check.Parent = KeyFrame
+Check.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Check.Position = UDim2.new(0.178913742, 0, 0.671869457, 0)
+Check.Size = UDim2.new(0, 200, 0, 50)
+Check.Font = Enum.Font.GothamBold
+Check.Text = "Check"
+Check.TextColor3 = Color3.fromRGB(255, 255, 255)
+Check.TextScaled = true
+Check.TextSize = 14.000
+Check.TextWrapped = true
+
+UICorner_2.Parent = Check
+
+key.Name = "key"
+key.Parent = KeyFrame
+key.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key.Position = UDim2.new(0.025559105, 0, 0.425647944, 0)
+key.Size = UDim2.new(0, 297, 0, 27)
+key.Font = Enum.Font.SourceSans
+key.PlaceholderText = "[Insert key here]"
+key.Text = ""
+key.TextColor3 = Color3.fromRGB(0, 0, 0)
+key.TextScaled = true
+key.TextSize = 14.000
+key.TextWrapped = true
+
+UICorner_3.Parent = key
+
+-- Scripts:
+
+local function OGKDD_fake_script() -- Check.LocalScript 
+	local script = Instance.new('LocalScript', Check)
+
+	local key = script.Parent.Parent.key
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if key.Text == "Ark2022" then -- Make the "Key"
+			script.Parent.Parent:TweenPosition(UDim2.new(0.383,0,-0.9,0), "Out", "Quad", 1, true)
+			if key.Text == "Ark2022" then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/Not69X69/Something-Cool/main/Op'))()
+			end
+			
+		    wait(5)
+			script.Parent.Parent:Destroy()
+			print("Destroyed!")
+		elseif
+			key.Text == "" then
+			key.Text = "" else
+			key.Text = "Incorrecy, try again."
+			wait(1)
+			key.Text = ""		
+		end
+	end)
+end
+coroutine.wrap(OGKDD_fake_script)()
+
