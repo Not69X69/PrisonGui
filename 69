@@ -88,7 +88,7 @@ local function OGKDD_fake_script() -- Check.LocalScript
 		elseif
 			key.Text == "" then
 			key.Text = "" else
-			key.Text = "Incorrecy, try again."
+			key.Text = "Incorrect, try again."
 			wait(1)
 			key.Text = ""		
 		end
