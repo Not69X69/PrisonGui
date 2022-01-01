@@ -76,9 +76,9 @@ local function OGKDD_fake_script() -- Check.LocalScript
 	local key = script.Parent.Parent.key
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		if key.Text == "Ark2022" then -- Make the "Key"
+		if key.Text == "69" then -- Make the "Key"
 			script.Parent.Parent:TweenPosition(UDim2.new(0.383,0,-0.9,0), "Out", "Quad", 1, true)
-			if key.Text == "Ark2022" then
+			if key.Text == "69" then
 				loadstring(game:HttpGet('https://raw.githubusercontent.com/Not69X69/Something-Cool/main/Op'))()
 			end
 			
